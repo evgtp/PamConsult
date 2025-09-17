@@ -18,13 +18,9 @@
   background: linear-gradient(90.49deg, #53269d 0%, #6d31d0 100.2%);
   display: flex;
   align-items: center;
-  display: flex;
   justify-content: space-between;
   margin: 0 auto;
   align-items: center;
-}
-
-.header__logo {
   padding: 20px 50px;
 }
 
@@ -38,9 +34,10 @@
 
 .header .menu {
   opacity: 0;
+  pointer-events: none;
   overflow: hidden;
   transform: translateY(-10px);
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease;
   font-family: "Avenir Next Regular";
   color: #434364;
 }
@@ -52,7 +49,6 @@
   height: 30px;
   border: none;
   background-color: transparent;
-  padding: 45px 45px;
 }
 .header__burger-btn span {
   position: absolute;
@@ -72,7 +68,8 @@
 
 .header.open .menu {
   opacity: 1;
-  transition: all 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: auto;
 }
 
 .menu {
@@ -174,19 +171,20 @@
   font-size: 16px;
 }
 
-@media (min-width: 481px) and (max-width: 769px) {
-  .header__logo {
+@media (min-width: 768px) {
+  .header {
     padding: 20px 94px;
   }
-
-  .header__burger-btn {
-    padding: 45px 67px;
+  .header__nav-bar {
+    display: flex;
+    gap: 60px;
+    align-items: center;
   }
   .header__btn-connection {
     display: block;
     background: #ffdb80;
     box-shadow: 0px 14px 23px 0px #1c252c14;
-    padding: 8px 27px;
+    padding: 8px 26.5px;
     border: none;
     border-radius: 30px;
     font-family: "Montserrat";
@@ -195,7 +193,6 @@
     line-height: 32px;
     text-align: center;
     color: #6d31d0;
-    margin-left: 45px;
   }
 
   .menu {
@@ -204,8 +201,8 @@
   }
 }
 
-@media (min-width: 769px) and (max-width: 1001px) {
-  .header__logo {
+@media (min-width: 1000px) {
+  .header {
     padding: 20px 110px;
   }
   .header__logo-mobile {
@@ -214,24 +211,7 @@
   .header__logo-desktop {
     display: block;
   }
-  .header__btn-connection {
-    display: block;
-    background: #ffdb80;
-    box-shadow: 0px 14px 23px 0px #1c252c14;
-    padding: 8px 27px;
-    border: none;
-    border-radius: 30px;
-    font-family: "Montserrat";
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 32px;
-    text-align: center;
-    color: #6d31d0;
-    margin-left: 210px;
-  }
-  .header__burger-btn {
-    padding: 45px 75px;
-  }
+
   .menu {
     right: 110px;
     top: 110px;
@@ -239,9 +219,11 @@
 }
 
 @media (min-width: 1440px) {
-  .header__logo {
-    padding-top: 20px;
-    padding-left: 130px;
+  .header {
+    padding: 20px 110px 20px 130px;
+  }
+  .header__nav-bar {
+    gap: 71px;
   }
   .header__logo-mobile {
     display: none;
@@ -256,7 +238,6 @@
     height: 30px;
     border: none;
     background-color: transparent;
-    padding: 45px 45.5px;
   }
   .menu-desktop {
     display: block;
@@ -267,27 +248,15 @@
   .menu__link-desktop {
     color: #fff;
     font-family: "Avenir Next Regular";
-    padding: 9px 14px;
+    padding: 9px 15px;
   }
+
   #link-arrow::after {
     content: url(../picture/arrow_down.svg);
-    padding: 18px 14px 18px 4px;
+    padding-left: 4px;
     width: 8px;
     height: 4px;
-  }
-  .header__btn-connection {
-    display: block;
-    background: #ffdb80;
-    box-shadow: 0px 14px 23px 0px #1c252c14;
-    padding: 8px 27px;
-    border: none;
-    border-radius: 30px;
-    font-family: "Montserrat";
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 32px;
-    text-align: center;
-    color: #6d31d0;
-    margin-right: 110px;
+    position: relative;
+    bottom: 3px;
   }
 }
