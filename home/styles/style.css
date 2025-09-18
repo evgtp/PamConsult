@@ -146,11 +146,10 @@
 }
 .services {
   background: linear-gradient(180deg, #828cde -21.43%, #6d31d0 201.93%);
-  padding: 60px 50px;
-}
-.services__title {
-  border-bottom: 4px solid #fdbfa3;
-  margin-bottom: 36px;
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .services__title-text {
   font-family: "Avenir Next";
@@ -160,6 +159,9 @@
   text-align: center;
   padding-bottom: 10px;
   font-weight: 600;
+  border-bottom: 4px solid #fdbfa3;
+  margin-bottom: 36px;
+  width: 380px;
 }
 
 .services__cards {
@@ -170,20 +172,22 @@
 
 .services__cards-item {
   box-shadow: 0px 14px 23px 0px #1c252c14;
-  /* border-radius: 30px; */
   border-radius: 20px;
   background: #fff;
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 .cards__item-picture-tablet {
   display: none;
 }
 .cards__item-text {
   font-family: "Avenir Next";
-  padding-bottom: 20px;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
 }
 .cards__item-title {
   color: #434364;
@@ -200,7 +204,6 @@
   letter-spacing: 0.5px;
   text-align: center;
   vertical-align: middle;
-  padding: 20px 0;
 }
 .cards__item-btn {
   background: linear-gradient(96.1deg, #ffeb80 -22.07%, #fdbfa3 123.25%);
@@ -215,21 +218,14 @@
   text-align: center;
   color: #6d31d0;
 }
-/* .offer {
+.offer {
   background-image: url(../picture/picture_home1.png);
   background-position: center;
   background-size: cover;
-  padding: 40px;
-} */
-.offer__wrapper-title {
-  background: linear-gradient(
-    180deg,
-    rgba(183, 214, 239, 0.83) 32.29%,
-    #b7d6ef 59.9%,
-    rgba(183, 214, 239, 0) 100%
-  );
-
-  padding: 40px 40px 0 40px;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .offer__menu-list {
   flex-direction: row;
@@ -237,7 +233,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  column-gap: 30px;
+  row-gap: 30px;
   gap: 10px;
 }
 
@@ -249,7 +245,7 @@
 }
 .offer__menu-link {
   color: #ffdb80;
-  padding: 0.34px 5px;
+  padding: 0 7px 0 6px;
   background: #6d31d080;
   border-radius: 10px;
   display: inline;
@@ -258,29 +254,24 @@
   font-size: 16px;
   font-weight: 500;
 }
-/* .offer {
-  padding: 40px;
-} */
-.offer__wrapper-text {
-  background-image: url(../picture/picture_home1.png);
-  background-position: center;
-  background-size: cover;
-  padding: 30px 40px 40px 40px;
+
+.offer__text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  padding-bottom: 102px;
 }
+
 .offer__text-title {
   text-align: center;
   color: #fff;
   font-family: "Montserrat";
-
-  /* padding: 0 40px; */
+  padding-top: 30px;
 }
 
-/* .offer__text-title {
-  box-shadow: 0px 0px 80px 0px #023f76;
-} */
 .offer__text-title h4 {
   margin: 0;
-  margin-top: 30px;
   font-weight: 600;
   font-size: 36px;
   vertical-align: middle;
@@ -291,12 +282,7 @@
   line-height: 32px;
   vertical-align: middle;
 }
-.offer__wrapper-text {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.offer__wrapper-text p {
+.offer__text-content {
   font-family: "Avenir Next";
   font-weight: 400;
   font-size: 16px;
@@ -305,13 +291,12 @@
   color: #fff;
   text-align: center;
   margin: 0;
+  padding: 0 17.5px;
 }
+
 .offer__button {
   opacity: 1;
-  padding-top: 16px;
-  padding-right: 22px;
-  padding-bottom: 16px;
-  padding-left: 22px;
+  padding: 8px 25px;
   border-radius: 88.17px;
   background: linear-gradient(96.1deg, #ffeb80 -22.07%, #fdbfa3 123.25%);
   box-shadow: 0px 3.53px 35.27px 0px #ffb9af4d;
@@ -322,18 +307,88 @@
   line-height: 32px;
   vertical-align: middle;
   color: #6d31d0;
+  width: fit-content;
 }
-.offer__cards {
+.offer__cities {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.offer__title-cities {
+  margin: 0;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #fff;
+  padding-left: 51px;
+}
+.offer__carts {
   display: flex;
   gap: 20px;
 }
-.cart__item-text {
+.offer__carts-item {
+  /* width: 144px;
+  height: 180px; */
+  gap: 10px;
+  opacity: 1;
+  padding: 10px 7.5px;
+  border-radius: 12px;
+  border-width: 2px;
+  background: #ffffffcc;
+  border: 2px solid #ffffff;
+  box-shadow: 1.19px 1.42px 3.15px 0px #00000004;
+
+  box-shadow: 5.22px 6.26px 6.52px 0px #00000007;
+
+  box-shadow: 12.8px 15.36px 13px 0px #00000009;
+
+  box-shadow: 24.66px 29.59px 25.48px 0px #0000000b;
+
+  box-shadow: 41.49px 49.79px 46.85px 0px #0000000e;
+
+  box-shadow: 64.02px 76.82px 80px 0px #00000012;
+}
+.offer__carts-img {
+  width: 129px;
+  height: 123px;
+  opacity: 1;
+  border-radius: 10px 4px;
+}
+.offer__cart-text {
   font-family: "Montserrat";
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
   color: #828cde;
 }
+.offer__line-break-tablet {
+  display: none;
+}
+
+.offer__slider-dots {
+  padding-top: 28px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+}
+.offer__slider-dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  border: 2px solid #ffffff;
+  border-radius: 6px;
+}
+.offer__slider-dot.active {
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+  background: #fff;
+  border-radius: 10px;
+}
+
 @media (min-width: 481px) and (max-width: 999px) {
   .cards__item-picture {
     display: none;
@@ -366,19 +421,65 @@
     text-align: center;
     color: #6d31d0;
   }
-
   .menu {
     right: 94px;
     top: 110px;
   }
+  .main__container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .offer__line-break-mobile {
+    display: none;
+  }
+  .offer {
+    background-image: url(../picture/picture_home-tablet.png);
+    padding: 140px 0 20px;
+    align-items: start;
+  }
+  .offer__menu {
+    padding-left: 94px;
+  }
+  .offer__text-title {
+    text-align: start;
+    padding-top: 20px;
+  }
+  .offer__text {
+    padding-left: 94px;
+    gap: 20px;
+    padding-bottom: 107px;
+    align-items: start;
+  }
+  .offer__text-content {
+    padding: 0;
+    text-align: start;
+  }
+  .offer__line-break-tablet {
+    display: block;
+  }
+  .offer__cities {
+    padding-left: 66px;
+  }
+  .offer__title-cities {
+    padding-left: 0;
+  }
+  .offer__slider-dots {
+    position: absolute;
+    flex-direction: column;
+    right: 43px;
+    top: 312px;
+  }
   .services {
-    padding: 60px 94px;
+    padding: 60px 0;
   }
   .cards__item-picture {
     display: none;
   }
   .cards__item-picture-tablet {
     display: block;
+  }
+  .cards__item-text {
+    padding: 24px 0;
   }
 }
 
@@ -397,8 +498,31 @@
     right: 110px;
     top: 110px;
   }
+  .offer__menu {
+    padding-left: 110px;
+  }
+  .offer__text {
+    padding-left: 110px;
+    padding-bottom: 130px;
+  }
+  .offer__text-title {
+    padding-top: 24px;
+  }
+  .offer__line-break-tablet {
+    display: none;
+  }
+  .offer__line-break-middle {
+    display: block;
+  }
+  .offer__slider-dots {
+    right: 110px;
+  }
+
+  .offer__cities {
+    padding-left: 110px;
+  }
   .services {
-    padding: 80px 110px;
+    padding: 80px 0;
   }
   .services__cards {
     flex-direction: row;
@@ -414,6 +538,9 @@
   }
   .cards__item-picture-tablet {
     display: none;
+  }
+  .services__title-text {
+    margin-bottom: 56px;
   }
 }
 
@@ -446,7 +573,7 @@
   }
   .menu__link-desktop {
     color: #fff;
-    font-family: "Avenir Next Regular";
+    font-family: "Avenir Next";
     padding: 9px 15px;
   }
 
@@ -459,6 +586,6 @@
     bottom: 3px;
   }
   .services {
-    padding: 80px 130px;
+    padding: 80px 0;
   }
 }
