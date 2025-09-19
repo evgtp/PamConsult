@@ -18,6 +18,10 @@
   src: url(/fonts/Avenir\ Next\ W1G\ Medium.ttf) format("ttf");
 }
 
+body {
+  font-family: "Avenir Next";
+}
+
 .header {
   width: 100%;
   background: linear-gradient(90.49deg, #53269d 0%, #6d31d0 100.2%);
@@ -43,7 +47,6 @@
   overflow: hidden;
   transform: translateY(-10px);
   transition: opacity 0.3s ease;
-  font-family: "Avenir Next";
   color: #434364;
   font-weight: 600;
 }
@@ -117,7 +120,6 @@
   line-height: 32px;
 }
 .main__text p {
-  font-family: "Avenir Next";
   width: 365px;
   font-size: 16px;
   line-height: 24px;
@@ -152,7 +154,6 @@
   align-items: center;
 }
 .services__title-text {
-  font-family: "Avenir Next";
   color: #fff;
   font-size: 36px;
   line-height: 40px;
@@ -182,7 +183,6 @@
   display: none;
 }
 .cards__item-text {
-  font-family: "Avenir Next";
   padding: 20px 0;
   display: flex;
   flex-direction: column;
@@ -198,7 +198,6 @@
 .cards__item-description {
   color: #605866;
   line-height: 21px;
-  font-family: "Avenir Next";
   font-weight: 400;
   font-size: 16px;
   letter-spacing: 0.5px;
@@ -233,24 +232,24 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  row-gap: 30px;
   gap: 10px;
+  row-gap: 20px;
 }
 
 .offer__menu-list span {
   width: 2px;
   height: 10px;
   background-color: #fff;
-  /* margin: 5px 10px; */
 }
+
 .offer__menu-link {
+  font-family: "Montserrat";
   color: #ffdb80;
-  padding: 0 7px 0 6px;
+  padding: 0 5px;
   background: #6d31d080;
   border-radius: 10px;
   display: inline;
   line-height: 20px;
-  font-family: "Avenir Next";
   font-size: 16px;
   font-weight: 500;
 }
@@ -260,14 +259,13 @@
   flex-direction: column;
   gap: 30px;
   align-items: center;
-  padding-bottom: 102px;
+  margin-bottom: 102px;
 }
 
 .offer__text-title {
   text-align: center;
   color: #fff;
   font-family: "Montserrat";
-  padding-top: 30px;
 }
 
 .offer__text-title h4 {
@@ -283,7 +281,6 @@
   vertical-align: middle;
 }
 .offer__text-content {
-  font-family: "Avenir Next";
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -291,7 +288,17 @@
   color: #fff;
   text-align: center;
   margin: 0;
-  padding: 0 17.5px;
+}
+.offer__line-break-mobile {
+  display: block;
+}
+
+.offer__line-break-tablet {
+  display: none;
+}
+
+.offer__line-break-middle {
+  display: none;
 }
 
 .offer__button {
@@ -319,7 +326,6 @@
   font-family: "Montserrat";
   font-weight: 600;
   font-size: 20px;
-  letter-spacing: 0%;
   vertical-align: middle;
   color: #fff;
   padding-left: 51px;
@@ -327,28 +333,22 @@
 .offer__carts {
   display: flex;
   gap: 20px;
+  width: 480px;
+  overflow-x: auto;
+  padding: 0 51px;
+  scrollbar-width: none;
 }
 .offer__carts-item {
-  /* width: 144px;
-  height: 180px; */
-  gap: 10px;
+  width: 144px;
+  height: 180px;
   opacity: 1;
   padding: 10px 7.5px;
   border-radius: 12px;
   border-width: 2px;
   background: #ffffffcc;
   border: 2px solid #ffffff;
-  box-shadow: 1.19px 1.42px 3.15px 0px #00000004;
-
-  box-shadow: 5.22px 6.26px 6.52px 0px #00000007;
-
-  box-shadow: 12.8px 15.36px 13px 0px #00000009;
-
-  box-shadow: 24.66px 29.59px 25.48px 0px #0000000b;
-
-  box-shadow: 41.49px 49.79px 46.85px 0px #0000000e;
-
   box-shadow: 64.02px 76.82px 80px 0px #00000012;
+  flex-shrink: 0;
 }
 .offer__carts-img {
   width: 129px;
@@ -363,25 +363,25 @@
   line-height: 32px;
   color: #828cde;
 }
-.offer__line-break-tablet {
+.offer__slider-dots {
   display: none;
 }
 
-.offer__slider-dots {
-  padding-top: 28px;
+.offer__slider-dots-mobile {
+  margin-top: 24px;
   display: flex;
   flex-direction: row;
   gap: 12px;
   align-items: center;
 }
-.offer__slider-dot {
+.offer__slider-dot-mobile {
   width: 12px;
   height: 12px;
   opacity: 1;
   border: 2px solid #ffffff;
   border-radius: 6px;
 }
-.offer__slider-dot.active {
+.offer__slider-dot-mobile.active {
   width: 20px;
   height: 20px;
   opacity: 1;
@@ -437,18 +437,17 @@
     padding: 140px 0 20px;
     align-items: start;
   }
-  .offer__menu {
-    padding-left: 94px;
+  .offer__menu-list {
+    justify-content: flex-start;
   }
   .offer__text-title {
     text-align: start;
-    padding-top: 20px;
   }
   .offer__text {
     padding-left: 94px;
     gap: 20px;
-    padding-bottom: 107px;
     align-items: start;
+    margin-bottom: 107px;
   }
   .offer__text-content {
     padding: 0;
@@ -463,11 +462,37 @@
   .offer__title-cities {
     padding-left: 0;
   }
+  .offer__carts {
+    padding: 0;
+    width: 100%;
+  }
+  .offer__wrapper {
+    display: flex;
+    gap: 47px;
+  }
+  .offer__slider-dots-mobile {
+    display: none;
+  }
   .offer__slider-dots {
-    position: absolute;
+    display: flex;
     flex-direction: column;
-    right: 43px;
-    top: 312px;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+  }
+  .offer__slider-dot {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    border: 2px solid #ffffff;
+    border-radius: 6px;
+  }
+  .offer__slider-dot.active {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    background: #fff;
+    border-radius: 10px;
   }
   .services {
     padding: 60px 0;
@@ -513,9 +538,6 @@
   }
   .offer__line-break-middle {
     display: block;
-  }
-  .offer__slider-dots {
-    right: 110px;
   }
 
   .offer__cities {
@@ -573,7 +595,6 @@
   }
   .menu__link-desktop {
     color: #fff;
-    font-family: "Avenir Next";
     padding: 9px 15px;
   }
 
