@@ -148,7 +148,7 @@ body {
 }
 .services {
   background: linear-gradient(180deg, #828cde -21.43%, #6d31d0 201.93%);
-  padding: 60px 0;
+  padding: 60px 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -221,10 +221,11 @@ body {
   background-image: url(../picture/picture_home1.png);
   background-position: center;
   background-size: cover;
-  padding: 40px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+  position: relative;
 }
 .offer__menu-list {
   flex-direction: row;
@@ -260,6 +261,7 @@ body {
   gap: 30px;
   align-items: center;
   margin-bottom: 102px;
+  margin-top: 40px;
 }
 
 .offer__text-title {
@@ -300,6 +302,9 @@ body {
 .offer__line-break-middle {
   display: none;
 }
+.offer__line-break-desktop {
+  display: none;
+}
 
 .offer__button {
   opacity: 1;
@@ -320,6 +325,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 100%;
+  overflow: hidden;
+  margin-left: 51px;
 }
 .offer__title-cities {
   margin: 0;
@@ -328,15 +336,14 @@ body {
   font-size: 20px;
   vertical-align: middle;
   color: #fff;
-  padding-left: 51px;
 }
 .offer__carts {
   display: flex;
   gap: 20px;
-  width: 480px;
   overflow-x: auto;
-  padding: 0 51px;
   scrollbar-width: none;
+  margin-bottom: 84px;
+  scroll-snap-type: x mandatory;
 }
 .offer__carts-item {
   width: 144px;
@@ -349,6 +356,9 @@ body {
   border: 2px solid #ffffff;
   box-shadow: 64.02px 76.82px 80px 0px #00000012;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .offer__carts-img {
   width: 129px;
@@ -363,25 +373,23 @@ body {
   line-height: 32px;
   color: #828cde;
 }
-.offer__slider-dots {
-  display: none;
-}
 
-.offer__slider-dots-mobile {
-  margin-top: 24px;
+.offer__slider-dots {
   display: flex;
   flex-direction: row;
   gap: 12px;
   align-items: center;
+  position: absolute;
+  bottom: 40px;
 }
-.offer__slider-dot-mobile {
+.offer__slider-dot {
   width: 12px;
   height: 12px;
   opacity: 1;
   border: 2px solid #ffffff;
   border-radius: 6px;
 }
-.offer__slider-dot-mobile.active {
+.offer__slider-dot.active {
   width: 20px;
   height: 20px;
   opacity: 1;
@@ -434,7 +442,9 @@ body {
   }
   .offer {
     background-image: url(../picture/picture_home-tablet.png);
-    padding: 140px 0 20px;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     align-items: start;
   }
   .offer__menu-list {
@@ -444,7 +454,7 @@ body {
     text-align: start;
   }
   .offer__text {
-    padding-left: 94px;
+    margin: 140px 0 0 94px;
     gap: 20px;
     align-items: start;
     margin-bottom: 107px;
@@ -457,28 +467,29 @@ body {
     display: block;
   }
   .offer__cities {
-    padding-left: 66px;
+    margin-bottom: 20px;
+    margin-left: 66px;
   }
   .offer__title-cities {
     padding-left: 0;
   }
   .offer__carts {
-    padding: 0;
-    width: 100%;
+    margin: 0;
+  }
+  .offer__carts-item {
+    background: #fff;
   }
   .offer__wrapper {
     display: flex;
     gap: 47px;
-  }
-  .offer__slider-dots-mobile {
-    display: none;
   }
   .offer__slider-dots {
     display: flex;
     flex-direction: column;
     gap: 12px;
     align-items: center;
-    justify-content: center;
+    bottom: 413px;
+    right: 43px;
   }
   .offer__slider-dot {
     width: 12px;
@@ -523,15 +534,14 @@ body {
     right: 110px;
     top: 110px;
   }
-  .offer__menu {
-    padding-left: 110px;
+  .offer {
+    background-image: url(../picture/picture_home1-middle.png);
   }
   .offer__text {
-    padding-left: 110px;
-    padding-bottom: 130px;
-  }
-  .offer__text-title {
-    padding-top: 24px;
+    padding-left: 0;
+    margin-bottom: 78px;
+    gap: 24px;
+    margin: 140px 0 130px 110px;
   }
   .offer__line-break-tablet {
     display: none;
@@ -541,7 +551,16 @@ body {
   }
 
   .offer__cities {
-    padding-left: 110px;
+    padding-left: 0;
+    margin-left: 110px;
+  }
+  .offer__carts-item {
+    background: #ffffffcc;
+  }
+
+  .offer__slider-dots {
+    bottom: 420px;
+    right: 110px;
   }
   .services {
     padding: 80px 0;
@@ -608,5 +627,27 @@ body {
   }
   .services {
     padding: 80px 0;
+  }
+  .offer {
+    background-image: url(../picture/picture_home1_desktop.png);
+  }
+  .offer__text {
+    margin: 130px 0 78px 158px;
+  }
+  .offer__cities {
+    margin-left: 158px;
+    margin-bottom: 60px;
+  }
+  .offer__slider-dots {
+    right: 61.5px;
+  }
+  .offer__carts-item {
+    background: #fff;
+  }
+  .offer__line-break-middle {
+    display: none;
+  }
+  .offer__line-break-desktop {
+    display: block;
   }
 }
