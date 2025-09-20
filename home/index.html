@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="../normalize/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <script defer src="./js/script.js"></script>
+    <script defer src="./js/slider.js"></script>
     <title>PumConsult</title>
   </head>
   <body>
@@ -170,105 +175,317 @@
             </div>
           </div>
         </div>
-        <div class="offer">
-          <div class="offer__text">
-            <nav class="offer__menu">
-              <ul class="offer__menu-list">
-                <li class="offer__menu-item">
-                  <a class="offer__menu-link" href="">INVESTMENTS</a>
-                </li>
-                <span></span>
-                <li class="offer__menu-item">
-                  <a class="offer__menu-link" href="">BUSINESS RELOCATION</a>
-                </li>
-                <span></span>
-                <li class="offer__menu-item">
-                  <a class="offer__menu-link" href="">FAMILY RELOCATION</a>
-                </li>
-              </ul>
-            </nav>
-            <div class="offer__text-title">
-              <h4>Relocating to Cyprus</h4>
-              <span>Seamless – Exceptional – Experience.</span>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="offer swiper-slide">
+              <div class="offer__text">
+                <nav class="offer__menu">
+                  <ul class="offer__menu-list">
+                    <li class="offer__menu-item">
+                      <a class="offer__menu-link" href="">INVESTMENTS</a>
+                    </li>
+                    <span></span>
+                    <li class="offer__menu-item">
+                      <a class="offer__menu-link" href=""
+                        >BUSINESS RELOCATION</a
+                      >
+                    </li>
+                    <span></span>
+                    <li class="offer__menu-item">
+                      <a class="offer__menu-link" href="">FAMILY RELOCATION</a>
+                    </li>
+                  </ul>
+                </nav>
+                <div class="offer__text-title">
+                  <h4>Relocating to Cyprus</h4>
+                  <span>Seamless – Exceptional – Experience.</span>
+                </div>
+                <p class="offer__text-content">
+                  The captivating Mediterranean island of
+                  <br class="offer__line-break-mobile" />Cyprus has
+                  <br class="offer__line-break-tablet" />
+                  become a <br class="offer__line-break-desktop" />
+                  business <br class="offer__line-break-middle" />
+                  haven with
+                  <br class="offer__line-break-mobile" />
+                  a flourishing expat <br class="offer__line-break-tablet" />
+                  community. The strategic
+                  <br class="offer__line-break-desktop" />
+                  <br class="offer__line-break-mobile" />
+                  location that <br class="offer__line-break-middle" />
+                  grants networking
+                  <br class="offer__line-break-tablet" />
+                  opportunities
+                  <br class="offer__line-break-mobile" />
+                  and the stability of <br class="offer__line-break-desktop" />
+                  being in the EU
+                  <br class="offer__line-break-middle" />
+                  offers <br class="offer__line-break-mobile" /><br
+                    class="offer__line-break-tablet"
+                  />
+                  entrepreneurs the abilities they need
+                  <br class="offer__line-break-desktop" />
+                  to thrive.
+                </p>
+                <button class="offer__button">
+                  <h4 class="offer__button-text">Find Out More</h4>
+                </button>
+              </div>
+              <div class="offer__cities">
+                <h4 class="offer__title-cities">Most popular cities</h4>
+                <div class="offer__carts">
+                  <div class="offer__carts-item">
+                    <img
+                      class="offer__carts-img"
+                      src="./picture/offer_cities_slider1_image.png"
+                      alt="Nicosia"
+                    />
+                    <p class="offer__cart-text">Nicosia</p>
+                  </div>
+                  <div class="offer__carts-item">
+                    <img
+                      class="offer__carts-img"
+                      src="./picture/offer_cities_slider2_image.png"
+                      alt="Limassol"
+                    />
+                    <p class="offer__cart-text">Limassol</p>
+                  </div>
+                  <div class="offer__carts-item">
+                    <img
+                      class="offer__carts-img"
+                      src="./picture/offer_cities_slider3_image.png"
+                      alt="Paphos"
+                    />
+                    <p class="offer__cart-text">Paphos</p>
+                  </div>
+                  <div class="offer__carts-item">
+                    <img
+                      class="offer__carts-img"
+                      src="./picture/offer_ciities_slider4_image.png"
+                      alt="Larnaka"
+                    />
+                    <p class="offer__cart-text">Larnaka</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <p class="offer__text-content">
-              The captivating Mediterranean island of
-              <br class="offer__line-break-mobile" />Cyprus has
-              <br class="offer__line-break-tablet" />
-              become a <br class="offer__line-break-desktop" />
-              business <br class="offer__line-break-middle" />
-              haven with
-              <br class="offer__line-break-mobile" />
-              a flourishing expat <br class="offer__line-break-tablet" />
-              community. The strategic
-              <br class="offer__line-break-desktop" />
-              <br class="offer__line-break-mobile" />
-              location that <br class="offer__line-break-middle" />
-              grants networking
-              <br class="offer__line-break-tablet" />
-              opportunities
-              <br class="offer__line-break-mobile" />
-              and the stability of <br class="offer__line-break-desktop" />
-              being in the EU
-              <br class="offer__line-break-middle" />
-              offers <br class="offer__line-break-mobile" /><br
-                class="offer__line-break-tablet"
-              />
-              entrepreneurs the abilities they need
-              <br class="offer__line-break-desktop" />
-              to thrive.
-            </p>
-            <button class="offer__button">
-              <h4 class="offer__button-text">Find Out More</h4>
-            </button>
-          </div>
-          <div class="offer__cities">
-            <h4 class="offer__title-cities">Most popular cities</h4>
-            <div class="offer__carts">
-              <div class="offer__carts-item">
-                <img
-                  class="offer__carts-img"
-                  src="./picture/offer_cities_slider1_image.png"
-                  alt="Nicosia"
-                />
-                <p class="offer__cart-text">Nicosia</p>
+            <div class="offer__slide-two swiper-slide">
+              <div class="offer__slide-two-text">
+                <nav class="offer__slide-two-menu">
+                  <ul class="offer__slide-two-menu-list">
+                    <li class="offer__slide-two-menu-item">
+                      <a class="offer__slide-two-menu-link" href=""
+                        >INVESTMENTS</a
+                      >
+                    </li>
+                    <span></span>
+                    <li class="offer__slide-two-menu-item">
+                      <a class="offer__slide-two-menu-link" href=""
+                        >BUSINESS RELOCATION</a
+                      >
+                    </li>
+                    <span></span>
+                    <li class="offer__slide-two-menu-item">
+                      <a class="offer__slide-two-menu-link" href=""
+                        >FAMILY RELOCATION</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+                <div class="offer__slide-two-text-title">
+                  <h4>Relocating to Cyprus</h4>
+                </div>
+                <p class="offer__slide-two-text-content">
+                  Real estate has become a flourishing type
+                  <br class="offer__line-break-mobile" />
+                  of investment on the island, with an increasing
+                  <br class="offer__line-break-mobile" />
+                  number of people seeking to invest in residential
+                  <br class="offer__line-break-mobile" />
+                  and commercial property projects in Cyprus.<br
+                    class="offer__line-break-mobile"
+                  />
+                  With a confident and stable economic outlook,<br
+                    class="offer__line-break-mobile"
+                  />
+                  it is a great time to consider investing<br
+                    class="offer__line-break-mobile"
+                  />
+                  in Cyprus property.
+                </p>
+                <button class="offer__button">
+                  <h4 class="offer__slide-two-button-text">Find Out More</h4>
+                </button>
               </div>
-              <div class="offer__carts-item">
-                <img
-                  class="offer__carts-img"
-                  src="./picture/offer_cities_slider2_image.png"
-                  alt="Limassol"
-                />
-                <p class="offer__cart-text">Limassol</p>
+            </div>
+            <div class="offer__slide-three swiper-slide">
+              <div class="offer__slide-three-text">
+                <nav class="offer__slide-two-menu">
+                  <ul class="offer__slide-two-menu-list">
+                    <li class="offer__slide-two-menu-item">
+                      <a class="offer__slide-two-menu-link" href=""
+                        >INVESTMENTS</a
+                      >
+                    </li>
+                    <span></span>
+                    <li class="offer__slide-two-menu-item">
+                      <a class="offer__slide-two-menu-link" href=""
+                        >BUSINESS RELOCATION</a
+                      >
+                    </li>
+                    <span></span>
+                    <li class="offer__slide-two-menu-item">
+                      <a class="offer__slide-two-menu-link" href=""
+                        >FAMILY RELOCATION</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+                <div class="offer__slide-two-text-title">
+                  <h4>Family Relocation</h4>
+                </div>
+                <p class="offer__slide-two-text-content">
+                  Globally known as one of the safest places to
+                  <br class="offer__line-break-mobile" />
+                  live in the world, Cyprus is the ideal location for
+                  <br class="offer__line-break-mobile" />
+                  families. The healthy lifestyle and family-friendly
+                  <br class="offer__line-break-mobile" />
+                  communities have much to offer to every
+                  <br class="offer__line-break-mobile" />
+                  member of your family.
+                </p>
+                <button class="offer__button">
+                  <h4 class="offer__button-text">Find Out More</h4>
+                </button>
               </div>
-              <div class="offer__carts-item">
-                <img
-                  class="offer__carts-img"
-                  src="./picture/offer_cities_slider3_image.png"
-                  alt="Paphos"
-                />
-                <p class="offer__cart-text">Paphos</p>
+            </div>
+            <div class="offer__slide-four swiper-slide">
+              <div class="offer__slide-four-text">
+                <nav class="offer__menu">
+                  <ul class="offer__menu-list">
+                    <li class="offer__menu-item">
+                      <a class="offer__menu-link" href="">INVESTMENTS</a>
+                    </li>
+                    <span></span>
+                    <li class="offer__menu-item">
+                      <a class="offer__menu-link" href=""
+                        >BUSINESS RELOCATION</a
+                      >
+                    </li>
+                    <span></span>
+                    <li class="offer__menu-item">
+                      <a class="offer__menu-link" href="">FAMILY RELOCATION</a>
+                    </li>
+                  </ul>
+                </nav>
+                <div class="offer__text-title">
+                  <h4>Business Relocation</h4>
+                </div>
+                <p class="offer__text-content">
+                  Cyprus has a lot to offer for business
+                  <br class="offer__line-break-mobile" />
+                  entrepreneurs who aim to reach for more and
+                  <br class="offer__line-break-mobile" />
+                  expand their business goals. The attractive tax
+                  <br class="offer__line-break-mobile" />
+                  benefits and office locations have transformed
+                  <br class="offer__line-break-mobile" />
+                  Cyprus into a country with endless business
+                  <br class="offer__line-break-mobile" />
+                  opportunities for everyone.
+                </p>
+                <button class="offer__button">
+                  <h4 class="offer__slide-four-button-text">Find Out More</h4>
+                </button>
               </div>
-              <div class="offer__carts-item">
-                <img
-                  class="offer__carts-img"
-                  src="./picture/offer_ciities_slider4_image.png"
-                  alt="Larnaka"
-                />
-                <p class="offer__cart-text">Larnaka</p>
+            </div>
+            <div class="offer__slide-five swiper-slide">
+              <div class="offer__slide-five-text">
+                <nav class="offer__slide-two-menu">
+                  <ul class="offer__slide-two-menu-list">
+                    <li class="offer__slide-two-menu-item">
+                      <a class="offer__slide-two-menu-link" href=""
+                        >INVESTMENTS</a
+                      >
+                    </li>
+                    <span></span>
+                    <li class="offer__slide-two-menu-item">
+                      <a class="offer__slide-two-menu-link" href=""
+                        >BUSINESS RELOCATION</a
+                      >
+                    </li>
+                    <span></span>
+                    <li class="offer__slide-two-menu-item">
+                      <a class="offer__slide-two-menu-link" href=""
+                        >FAMILY RELOCATION</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+                <div class="offer__slide-two-text-title">
+                  <h4>Investing in Yachts</h4>
+                </div>
+                <p class="offer__slide-two-text-content">
+                  Living on an island is an adventure that opens up
+                  <br class="offer__line-break-mobile" />
+                  a wide range of experiences and possibilities.
+                  <br class="offer__line-break-mobile" />
+                  Here, you can conquer the Mediterranean Sea by
+                  <br class="offer__line-break-mobile" />
+                  renting or owning <br class="offer__line-break-mobile" />
+                  a yacht as part of your investment plan.
+                </p>
+                <button class="offer__button">
+                  <h4 class="offer__button-text">Find Out More</h4>
+                </button>
+              </div>
+            </div>
+            <div class="offer__slide-six swiper-slide">
+              <div class="offer__slide-six-text">
+                <nav class="offer__menu">
+                  <ul class="offer__menu-list">
+                    <li class="offer__menu-item">
+                      <a class="offer__menu-link" href="">INVESTMENTS</a>
+                    </li>
+                    <span></span>
+                    <li class="offer__menu-item">
+                      <a class="offer__menu-link" href=""
+                        >BUSINESS RELOCATION</a
+                      >
+                    </li>
+                    <span></span>
+                    <li class="offer__menu-item">
+                      <a class="offer__menu-link" href="">FAMILY RELOCATION</a>
+                    </li>
+                  </ul>
+                </nav>
+                <div class="offer__text-title">
+                  <h4>Moving to Cyprus</h4>
+                </div>
+                <p class="offer__text-content">
+                  Thousands of individuals and families from every
+                  <br class="offer__line-break-mobile" />
+                  part of the globe have immigrated
+                  <br class="offer__line-break-mobile" />
+                  to Cyprus after discovering their perfect place
+                  <br class="offer__line-break-mobile" />
+                  to call home. The island is now one of the most
+                  <br class="offer__line-break-mobile" />
+                  dominant destinations with huge
+                  <br class="offer__line-break-mobile" />
+                  expat communities.
+                </p>
+                <button class="offer__button">
+                  <h4 class="offer__button-text">Find Out More</h4>
+                </button>
               </div>
             </div>
           </div>
-          <div class="offer__slider-dots">
-            <span class="offer__slider-dot active"></span
-            ><span class="offer__slider-dot"></span
-            ><span class="offer__slider-dot"></span
-            ><span class="offer__slider-dot"></span
-            ><span class="offer__slider-dot"></span
-            ><span class="offer__slider-dot"></span>
-          </div>
+          <div class="offer__slider-dots"></div>
         </div>
       </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>

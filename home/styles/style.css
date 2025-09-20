@@ -202,7 +202,6 @@ body {
   font-size: 16px;
   letter-spacing: 0.5px;
   text-align: center;
-  vertical-align: middle;
 }
 .cards__item-btn {
   background: linear-gradient(96.1deg, #ffeb80 -22.07%, #fdbfa3 123.25%);
@@ -225,7 +224,7 @@ body {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  position: relative;
+  /* position: relative; */
 }
 .offer__menu-list {
   flex-direction: row;
@@ -234,7 +233,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  row-gap: 20px;
+  row-gap: 30px;
 }
 
 .offer__menu-list span {
@@ -274,13 +273,11 @@ body {
   margin: 0;
   font-weight: 600;
   font-size: 36px;
-  vertical-align: middle;
   color: #fff;
 }
 .offer__text-title span {
   font-size: 20px;
   line-height: 32px;
-  vertical-align: middle;
 }
 .offer__text-content {
   font-weight: 400;
@@ -317,7 +314,6 @@ body {
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
-  vertical-align: middle;
   color: #6d31d0;
   width: fit-content;
 }
@@ -327,15 +323,15 @@ body {
   gap: 16px;
   width: 100%;
   overflow: hidden;
-  margin-left: 51px;
+  align-self: start;
 }
 .offer__title-cities {
   margin: 0;
   font-family: "Montserrat";
   font-weight: 600;
   font-size: 20px;
-  vertical-align: middle;
   color: #fff;
+  padding-left: 51px;
 }
 .offer__carts {
   display: flex;
@@ -344,6 +340,8 @@ body {
   scrollbar-width: none;
   margin-bottom: 84px;
   scroll-snap-type: x mandatory;
+  padding-left: 51px;
+  padding-right: 150px;
 }
 .offer__carts-item {
   width: 144px;
@@ -374,27 +372,192 @@ body {
   color: #828cde;
 }
 
-.offer__slider-dots {
+.offer__slide-two {
+  background-image: url(../picture/offer2_image.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  /* position: relative; */
+}
+
+.offer__slide-two-menu-list {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  row-gap: 30px;
+}
+
+.offer__slide-two-menu-list span {
+  width: 2px;
+  height: 10px;
+  background-color: #434364;
+}
+
+.offer__slide-two-menu-link {
+  font-family: "Montserrat";
+  color: #ffdb80;
+  padding: 0 5px;
+  background: #6d31d080;
+  border-radius: 10px;
+  display: inline;
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.offer__slide-two-text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 368px;
+  margin-top: 61px;
+}
+
+.offer__slide-two-text-title {
+  text-align: center;
+  color: #fff;
+  font-family: "Montserrat";
+}
+
+.offer__slide-two-text-title h4 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 36px;
+  color: #434364;
+}
+.offer__slide-two-text-title span {
+  font-size: 20px;
+  line-height: 32px;
+}
+.offer__slide-two-text-content {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #434364;
+  text-align: center;
+  margin: 0;
+}
+
+.offer__slide-three {
+  background-image: url(../picture/offer3_image.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  /* position: relative; */
+}
+
+.offer__slide-three-text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 414px;
+  margin-top: 61px;
+}
+
+.offer__slide-four {
+  background-image: url(../picture/offer4_image.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  /* position: relative; */
+}
+
+.offer__slide-four-text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 388.84px;
+  margin-top: 61px;
+}
+
+.offer__slide-five {
+  background-image: url(../picture/offer5_image.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  /* position: relative; */
+}
+
+.offer__slide-five-text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 413px;
+  margin-top: 61px;
+}
+
+.offer__slide-six {
+  background-image: url(../picture/offer6_image.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  /* position: relative; */
+}
+
+.offer__slide-six-text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 395px;
+  margin-top: 61px;
+}
+
+.offer__slider-dots.swiper-pagination-bullets.swiper-pagination-horizontal {
   display: flex;
   flex-direction: row;
   gap: 12px;
   align-items: center;
   position: absolute;
   bottom: 40px;
+  left: calc((100% - 140px) / 2);
+  z-index: 1;
 }
-.offer__slider-dot {
-  width: 12px;
-  height: 12px;
-  opacity: 1;
-  border: 2px solid #ffffff;
-  border-radius: 6px;
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  opacity: 1 !important;
+  border: 2px solid #ffffff !important;
+  border-radius: 6px !important;
+  z-index: 10;
+  background: none !important;
 }
-.offer__slider-dot.active {
-  width: 20px;
-  height: 20px;
-  opacity: 1;
-  background: #fff;
-  border-radius: 10px;
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 20px !important;
+  height: 20px !important;
+  opacity: 1 !important;
+  background: #fff !important;
+  border-radius: 10px !important;
+  z-index: 10;
+}
+
+.swiper {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 @media (min-width: 481px) and (max-width: 999px) {
@@ -442,7 +605,7 @@ body {
   }
   .offer {
     background-image: url(../picture/picture_home-tablet.png);
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     align-items: start;
@@ -536,6 +699,7 @@ body {
   }
   .offer {
     background-image: url(../picture/picture_home1-middle.png);
+    background-size: cover;
   }
   .offer__text {
     padding-left: 0;
@@ -630,6 +794,7 @@ body {
   }
   .offer {
     background-image: url(../picture/picture_home1_desktop.png);
+    background-size: cover;
   }
   .offer__text {
     margin: 130px 0 78px 158px;
