@@ -216,15 +216,38 @@ body {
   text-align: center;
   color: #6d31d0;
 }
-.offer {
-  background-image: url(../picture/picture_home1.png);
+
+.swiper-wrapper {
+  width: 100%;
+  height: 840px !important;
+}
+
+.swiper-slide {
   background-position: center;
   background-size: cover;
   display: flex;
   flex-direction: column;
+  background-repeat: no-repeat;
   align-items: center;
   overflow: hidden;
-  /* position: relative; */
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.swiper-slide-active {
+  z-index: 3;
+  opacity: 1;
+  visibility: visible;
+}
+.offer {
+  background-image: url(../picture/picture_home1.png);
+}
+
+.offer__wrapper {
+  height: 840px;
+  display: flex;
+  flex-direction: column;
 }
 .offer__menu-list {
   flex-direction: row;
@@ -234,6 +257,9 @@ body {
   align-items: center;
   gap: 10px;
   row-gap: 30px;
+}
+.offer__menu-item {
+  line-height: 20px;
 }
 
 .offer__menu-list span {
@@ -267,22 +293,29 @@ body {
   text-align: center;
   color: #fff;
   font-family: "Montserrat";
+  height: 60px;
 }
 
 .offer__text-title h4 {
   margin: 0;
-  font-weight: 600;
   font-size: 36px;
   color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 600;
+  line-height: 24px;
 }
 .offer__text-title span {
   font-size: 20px;
-  line-height: 32px;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 500;
+  line-height: 50px;
 }
 .offer__text-content {
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 22px;
   letter-spacing: 0.5px;
   color: #fff;
   text-align: center;
@@ -332,6 +365,7 @@ body {
   font-size: 20px;
   color: #fff;
   padding-left: 51px;
+  line-height: 14px;
 }
 .offer__carts {
   display: flex;
@@ -339,7 +373,6 @@ body {
   overflow-x: auto;
   scrollbar-width: none;
   margin-bottom: 84px;
-  scroll-snap-type: x mandatory;
   padding-left: 51px;
   padding-right: 150px;
 }
@@ -347,7 +380,7 @@ body {
   width: 144px;
   height: 180px;
   opacity: 1;
-  padding: 10px 7.5px;
+  padding: 8px 5.5px;
   border-radius: 12px;
   border-width: 2px;
   background: #ffffffcc;
@@ -374,13 +407,6 @@ body {
 
 .offer__slide-two {
   background-image: url(../picture/offer2_image.png);
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  /* position: relative; */
 }
 
 .offer__slide-two-menu-list {
@@ -448,13 +474,6 @@ body {
 
 .offer__slide-three {
   background-image: url(../picture/offer3_image.png);
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  /* position: relative; */
 }
 
 .offer__slide-three-text {
@@ -468,13 +487,6 @@ body {
 
 .offer__slide-four {
   background-image: url(../picture/offer4_image.png);
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  /* position: relative; */
 }
 
 .offer__slide-four-text {
@@ -488,13 +500,6 @@ body {
 
 .offer__slide-five {
   background-image: url(../picture/offer5_image.png);
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  /* position: relative; */
 }
 
 .offer__slide-five-text {
@@ -508,13 +513,6 @@ body {
 
 .offer__slide-six {
   background-image: url(../picture/offer6_image.png);
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  /* position: relative; */
 }
 
 .offer__slide-six-text {
@@ -529,11 +527,11 @@ body {
 .offer__slider-dots.swiper-pagination-bullets.swiper-pagination-horizontal {
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  gap: 4px;
   align-items: center;
   position: absolute;
-  bottom: 40px;
-  left: calc((100% - 140px) / 2);
+  bottom: 44px;
+  left: calc(50% - 75px);
   z-index: 1;
 }
 .swiper-pagination-bullet {
@@ -603,6 +601,9 @@ body {
   .offer__line-break-mobile {
     display: none;
   }
+  .swiper-wrapper {
+    height: 800px !important;
+  }
   .offer {
     background-image: url(../picture/picture_home-tablet.png);
     background-size: cover;
@@ -624,7 +625,8 @@ body {
   }
   .offer__text-content {
     padding: 0;
-    text-align: start;
+    text-align: left;
+    line-height: 22.5px;
   }
   .offer__line-break-tablet {
     display: block;
@@ -638,6 +640,8 @@ body {
   }
   .offer__carts {
     margin: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
   .offer__carts-item {
     background: #fff;
@@ -646,7 +650,15 @@ body {
     display: flex;
     gap: 47px;
   }
-  .offer__slider-dots {
+  .offer__slide-two-text {
+    margin: 140px 0 0 94px;
+    align-items: start;
+  }
+
+  .offer__slide-two-text-content {
+    text-align: left;
+  }
+  .offer__slider-dots.swiper-pagination-bullets.swiper-pagination-horizontal {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -700,13 +712,15 @@ body {
   .offer {
     background-image: url(../picture/picture_home1-middle.png);
     background-size: cover;
+    background-repeat: no-repeat;
   }
   .offer__text {
     padding-left: 0;
     margin-bottom: 78px;
     gap: 24px;
-    margin: 140px 0 130px 110px;
+    margin: 140px 0 120px 110px;
   }
+
   .offer__line-break-tablet {
     display: none;
   }
@@ -718,6 +732,9 @@ body {
     padding-left: 0;
     margin-left: 110px;
   }
+  .offer__carts {
+    gap: 40px;
+  }
   .offer__carts-item {
     background: #ffffffcc;
   }
@@ -725,6 +742,9 @@ body {
   .offer__slider-dots {
     bottom: 420px;
     right: 110px;
+  }
+  .offer__slide-two-text {
+    margin-top: 246px;
   }
   .services {
     padding: 80px 0;
@@ -799,20 +819,28 @@ body {
   .offer__text {
     margin: 130px 0 78px 158px;
   }
+  .offer__text-content {
+    line-height: 23.5px;
+  }
   .offer__cities {
     margin-left: 158px;
-    margin-bottom: 60px;
+    margin-bottom: 0;
   }
-  .offer__slider-dots {
+
+  .offer__slider-dots.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 360px;
     right: 61.5px;
+  }
+  .offer__carts {
+    gap: 40px;
   }
   .offer__carts-item {
     background: #fff;
   }
   .offer__line-break-middle {
-    display: none;
-  }
-  .offer__line-break-desktop {
     display: block;
+  }
+  .swiper-wrapper {
+    height: 740px !important;
   }
 }
