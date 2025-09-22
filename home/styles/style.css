@@ -254,7 +254,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-bottom: 106px;
+  height: 100%;
   padding-top: 40px;
 }
 
